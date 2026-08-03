@@ -631,6 +631,7 @@ window.addEventListener("beforeunload", () => {
     numero_intento: state.attemptNumber,
     pregunta_actual: state.currentIndex + 1,
     tiempo_restante: state.timeRemaining,
+    preguntas_respondidas: preguntasRespondidas,
   });
 });
 document.addEventListener("DOMContentLoaded", initApp);
