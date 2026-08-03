@@ -38,6 +38,7 @@ const state = {
   mode: "exam", // 'exam' | 'review'
   visitorId: null,
   attemptNumber: 0,
+  examFinished: false,
 };
 
 /* ============================================================
@@ -194,6 +195,7 @@ function startExam() {
   state.currentIndex = 0;
   state.timeRemaining = EXAM_DURATION_SECONDS;
   state.mode = "exam";
+  state.examFinished = false;
 
   setHidden(document.querySelector(".timer-strip"), false);
   byId("btn-summary").textContent = "Summary";
@@ -388,6 +390,7 @@ function showSummary() {
    RESULTS
    ============================================================ */
 function finishExam() {
+  state.examFinished = true;
   clearInterval(state.timerInterval);
   const total = state.examQuestions.length;
   let correct = 0;
@@ -617,5 +620,17 @@ function bindEvents() {
     });
   });
 }
+window.addEventListener("beforeunload", () => {
+  if (state.mode !== "exam") return;
 
+  if (state.examFinished) return;
+
+  sendAnalyticsEvent("abandonar_simulador", {
+    examen: "1Z0-1122-26",
+    visitor_id: state.visitorId,
+    numero_intento: state.attemptNumber,
+    pregunta_actual: state.currentIndex + 1,
+    tiempo_restante: state.timeRemaining,
+  });
+});
 document.addEventListener("DOMContentLoaded", initApp);
