@@ -123,6 +123,10 @@ function getAttemptNumber() {
   }
 }
 
+function getAnsweredQuestionsCount() {
+  return state.answers.filter((answer) => answer.selected !== null).length;
+}
+
 function sendAnalyticsEvent(eventName, parameters = {}) {
   if (typeof gtag !== "function") {
     console.warn(`Analytics no está disponible. Evento omitido: ${eventName}`);
@@ -622,8 +626,9 @@ function bindEvents() {
 }
 window.addEventListener("beforeunload", () => {
   if (state.mode !== "exam") return;
-
   if (state.examFinished) return;
+
+  const preguntasRespondidas = getAnsweredQuestionsCount();
 
   sendAnalyticsEvent("abandonar_simulador", {
     examen: "1Z0-1122-26",
