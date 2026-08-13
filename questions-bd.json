@@ -30,7 +30,7 @@
       "Language detection"
     ],
     "correct": 1,
-    "explanation": "El análisis de sentimiento detecta el tono emocional (positivo, negativo, neutral) expresado hacia aspectos específicos de un texto, justo lo que se necesita para medir opiniones sobre precio, calidad y servicio."
+    "explanation": "El análisis de sentimientos (Sentiment Analysis) en OCI Language está diseñado específicamente para detectar la afinidad u opinión (positiva, negativa, neutral o mixta) expresada en un texto. En el caso de OCI Language, incluye la capacidad de realizar un análisis de sentimientos basado en aspectos (Aspect-Based Sentiment Analysis), lo que permite identificar la opinión exacta sobre atributos específicos del producto como el precio, la calidad o el servicio al cliente."
   },
   {
     "q": "Which capability is supported by Oracle Cloud Infrastructure Language service?",
@@ -63,7 +63,7 @@
       "Audio tuning"
     ],
     "correct": 0,
-    "explanation": "La normalización de texto convierte formas habladas (números, fechas, abreviaturas) a un formato escrito estándar, haciendo la transcripción más clara y fácil de leer."
+    "explanation": "La normalización de texto (Text Normalization) en OCI Speech convierte automáticamente palabras habladas que representan números, fechas, monedas, horas y abreviaturas en su formato escrito estándar. Por ejemplo, transforma la frase hablada 'veintiuno de mayo de dos mil veintiséis por cincuenta dólares' en '21 de mayo de 2026 por $50'. Esto hace que la transcripción sea mucho más limpia, legible y fácil de comprender para las personas y para sistemas posteriores."
   },
   {
     "q": "Which statement describes the Optical Character Recognition (OCR) feature of Oracle Cloud Infrastructure Document Understanding?",
@@ -74,7 +74,7 @@
       "It converts audio files into text."
     ],
     "correct": 1,
-    "explanation": "El OCR (Reconocimiento Óptico de Caracteres) está diseñado específicamente para detectar y extraer texto impreso o manuscrito de imágenes de documentos; no traduce, mejora imágenes ni convierte audio."
+    "explanation": "El Reconocimiento Óptico de Caracteres (OCR) en OCI Document Understanding es la tecnología encargada de analizar imágenes o documentos digitalizados (como PDFs, JPGs o PNGs) para detectar, reconocer y extraer texto impreso o manuscrito, convirtiéndolo en texto digital procesable y de alta precisión."
   },
   {
     "q": "How does Oracle Cloud Infrastructure Document Understanding service facilitate business processes?",
@@ -85,7 +85,7 @@
       "By transcribing spoken language"
     ],
     "correct": 0,
-    "explanation": "Document Understanding automatiza la extracción de texto, tablas y datos clave de documentos (facturas, recibos, formularios), eliminando la necesidad de captura manual de datos."
+    "explanation": "El servicio OCI Document Understanding está diseñado para mejorar y agilizar las operaciones de negocio al automatizar la extracción de datos a partir de documentos (como facturas, recibos, formularios de identificación, solicitudes de préstamo o archivos PDF). Al extraer automáticamente texto, tablas y pares clave-valor (por ejemplo, fecha, monto total, nombre del cliente), elimina la necesidad de digitalización y entrada manual de datos, reduciendo errores operativos y tiempos de procesamiento."
   },
   {
     "q": "Which feature is NOT available as part of OCI Speech capabilities?",
@@ -96,7 +96,7 @@
       "Supports multiple languages including English, Spanish, and Portuguese"
     ],
     "correct": 2,
-    "explanation": "OCI Speech es un servicio de IA preentrenado, listo para usar mediante llamadas a la API, y no requiere experiencia en ciencia de datos para operarlo."
+    "explanation": "Los servicios de Inteligencia Artificial de OCI (como OCI Speech, Vision, Language y Document Understanding) están diseñados como servicios administrados listos para usar mediante llamadas a API o desde la consola de OCI. No requieren experiencia previa en ciencia de datos ni conocimientos avanzados de Machine Learning para ser implementados y operados por desarrolladores o equipos de TI. Por lo tanto, requerir experiencia extensa en ciencia de datos NO es una característica ni un requisito del servicio."
   },
   {
     "q": "What would you use Oracle AI Vector Search for?",
@@ -107,7 +107,7 @@
       "Query data based on semantics."
     ],
     "correct": 3,
-    "explanation": "AI Vector Search permite búsquedas por similitud basadas en el significado semántico de los datos (mediante embeddings vectoriales), en lugar de coincidencias exactas de palabras clave."
+    "explanation": "Oracle AI Vector Search es una funcionalidad integrada en Oracle Database (a partir de la versión 23ai) que permite representar y consultar información no estructurada (como texto, imágenes o audio) mediante vectores numéricos (embeddings). Su propósito principal es realizar búsquedas semánticas (similarity search), buscando datos según el significado y contexto de la consulta, en lugar de coincidir únicamente con palabras clave exactas. Es un pilar fundamental para arquitecturas de Generación Aumentada por Recuperación (RAG - Retrieval-Augmented Generation)."
   },
   {
     "q": "Which statement best describes the relationship between Artificial Intelligence (AI), Machine Learning (ML), and Deep Learning (DL)?",
@@ -140,7 +140,7 @@
       "Adjusting the model parameters to improve accuracy"
     ],
     "correct": 3,
-    "explanation": "El fine-tuning toma un modelo preentrenado y lo entrena adicionalmente con un conjunto de datos más pequeño y específico de la tarea, ajustando sus parámetros para mejorar la precisión en ese caso de uso."
+    "explanation": "En el contexto de OCI Generative AI, el ajuste fino (Fine-Tuning) es un proceso de aprendizaje supervisado mediante el cual se toma un modelo fundacional preentrenado (como Llama o Command) y se entrena con un conjunto de datos personalizado y específico de un dominio. Durante este proceso, se ajustan los parámetros (pesos) del modelo para que se adapte mejor a tareas o contextos específicos del negocio, mejorando la precisión y la relevancia de sus respuestas."
   },
   {
     "q": "What is the benefit of using embedding models in OCI Generative AI service?",
@@ -363,14 +363,14 @@
     "explanation": "Tareas como el análisis de sentimiento y la traducción de idiomas implican comprender y manipular el lenguaje humano, lo cual corresponde al Procesamiento de Lenguaje Natural (NLP)."
   },
   {
-    "q": "What feature of OCI Data Science provides an interactive coding environment for building and training models?",
+    "q": "Which component in OCI Data Science provides an interactive coding environment for building and training models?",
     "options": [
-      "Conda environment",
-      "Accelerated Data Science (ADS)",
-      "Model catalog",
-      "Notebook sessions"
+      "Notebook Sessions",
+      "Conda Environments",
+      "Data Science Jobs",
+      "Model Catalog"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Las sesiones de notebook de OCI Data Science ofrecen un entorno JupyterLab administrado e interactivo donde los científicos de datos escriben y ejecutan código para construir y entrenar modelos."
   },
   {
@@ -449,5 +449,104 @@
     ],
     "correct": 0,
     "explanation": "La auto-atención calcula, para cada palabra, cuánta atención (importancia) prestarle a las demás palabras de la secuencia según el contexto, permitiendo capturar relaciones sin importar la distancia entre ellas."
+  },
+  {
+    "q": "Emma is developing a customer support chatbot for an e-commerce website. The chatbot needs to provide accurate and up-to-date return policies, which change frequently. She initially tries fine-tuning but realizes that the return policy data changes too often. Which approach should Emma use instead?",
+    "options": [
+      "Reinforcement Learning",
+      "Zero-shot prompting",
+      "Prompt Engineering",
+      "Retrieval-Augmented Generation"
+    ],
+    "correct": 3,
+    "explanation": "RAG recupera la información desde una fuente de datos externa en el momento de la consulta, por lo que basta con actualizar esa fuente para que el chatbot responda con la política vigente; el fine-tuning, en cambio, exigiría reentrenar el modelo cada vez que cambien las políticas."
+  },
+  {
+    "q": "Which algorithm is primarily used for adjusting the weights of connections between neurons during the training of an Artificial Neural Network (ANN)?",
+    "options": [
+      "Gradient Descent",
+      "Random Forest",
+      "Support Vector Machine",
+      "Backpropagation"
+    ],
+    "correct": 3,
+    "explanation": "La retropropagación (backpropagation) propaga el error desde la capa de salida hacia atrás por la red, calculando el gradiente respecto de cada peso para poder actualizarlo; Random Forest y SVM son algoritmos distintos, ajenos a las redes neuronales."
+  },
+  {
+    "q": "Which AI domain can be employed for identifying patterns in images and extracting relevant features?",
+    "options": [
+      "Natural Language Processing",
+      "Anomaly Detection",
+      "Speech Processing",
+      "Computer Vision"
+    ],
+    "correct": 3,
+    "explanation": "La visión por computadora (Computer Vision) es el dominio de la IA dedicado a interpretar información visual: detecta patrones en las imágenes y extrae características relevantes como bordes, formas y objetos."
+  },
+  {
+    "q": "You are training a logistic regression model to classify e-mails as spam or not spam. The model is currently classifying too many e-mails as spam. What would you do to adjust the model?",
+    "options": [
+      "Decrease the number of iterations",
+      "Increase the regularization parameter",
+      "Increase the threshold value for classification",
+      "Decrease the weight of the feature representing the presence of certain keywords"
+    ],
+    "correct": 2,
+    "explanation": "La regresión logística devuelve una probabilidad que se compara con un umbral para decidir la clase. Al subir ese umbral se exige mayor confianza antes de marcar un correo como spam, lo que reduce directamente los falsos positivos."
+  },
+  {
+    "q": "You are training a deep learning model to classify images. What is the primary function of the convolutional layer?",
+    "options": [
+      "To generate new images",
+      "To detect specific features in the input image",
+      "To reduce the spatial dimensions of the input image",
+      "To classify the input image"
+    ],
+    "correct": 1,
+    "explanation": "La capa convolucional aplica filtros que recorren la imagen para detectar características específicas (bordes, texturas, formas). Reducir las dimensiones espaciales es tarea de las capas de pooling y la clasificación final corresponde a las capas densas."
+  },
+  {
+    "q": "Lisa is working on a project that involves transcribing thousands of audio files stored in Oracle Cloud. She wants to process multiple files efficiently instead of transcribing them one by one. Which OCI Speech feature should Lisa use?",
+    "options": [
+      "Batch support",
+      "Confidence scoring",
+      "Profanity filtering",
+      "Time stamping"
+    ],
+    "correct": 0,
+    "explanation": "El soporte por lotes (batch support) de OCI Speech permite enviar en una sola solicitud múltiples archivos de audio almacenados en Object Storage y procesarlos de forma conjunta, en lugar de transcribirlos uno a uno."
+  },
+  {
+    "q": "Which capability is supported by Oracle Cloud Infrastructure Vision service?",
+    "options": [
+      "Detecting vehicle number plates to issue speed citations",
+      "Detecting and preventing fraud in financial transactions",
+      "Analyzing historical data for unusual patterns",
+      "Generating realistic images from text"
+    ],
+    "correct": 0,
+    "explanation": "OCI Vision analiza imágenes: detecta objetos y extrae texto mediante OCR, por lo que puede reconocer matrículas de vehículos. La detección de fraude y el análisis de patrones inusuales corresponden a OCI Anomaly Detection, y la generación de imágenes a partir de texto a servicios de IA generativa."
+  },
+  {
+    "q": "You are analyzing customer feedback forms to identify common complaints. Which machine learning approach would you use?",
+    "options": [
+      "Unsupervised Learning",
+      "Supervised Learning",
+      "Deep Learning",
+      "Reinforcement Learning"
+    ],
+    "correct": 0,
+    "explanation": "Los formularios de feedback no vienen etiquetados y el objetivo es descubrir agrupaciones de quejas recurrentes sin categorías definidas de antemano; ese agrupamiento (clustering) es propio del aprendizaje no supervisado."
+  },
+  {
+    "q": "What feature of OCI Data Science provides an interactive coding environment for building and training models?",
+    "options": [
+      "Notebook Sessions",
+      "Conda Environments",
+      "Accelerated Data Science (ADS) SDK",
+      "Model Catalog"
+    ],
+    "correct": 0,
+    "explanation": "Las Notebook Sessions en OCI Data Science proporcionan un entorno de desarrollo interactivo basado en JupyterLab. Permite a los científicos de datos y desarrolladores escribir código (principalmente en Python y R), explorar y visualizar datos, así como construir, entrenar y evaluar modelos de aprendizaje automático directamente en la infraestructura de OCI."
   }
 ]
